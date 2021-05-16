@@ -13,7 +13,7 @@ module.exports.strToBin = (text) => {
 
 module.exports.binToStr = (text, delimiter=" ") => {
     try{
-        let stringeq = []
+        let stringEq = []
         text.split(delimiter).forEach(ele => {
             let asciiCounter = 0
             ele = ele.split("").reverse().join("");
@@ -22,9 +22,9 @@ module.exports.binToStr = (text, delimiter=" ") => {
                     asciiCounter += Math.pow(((i==0) ? 1 : 2), ((ele.split("")[i] && ele.split("")[i]==1) ? i : 0))
                 }
             }
-            stringeq.push(String.fromCharCode(asciiCounter))
+            stringEq.push(String.fromCharCode(asciiCounter))
         })
-        return stringeq.join("")
+        return stringEq.join("")
     }catch(e){
         return e
     }
