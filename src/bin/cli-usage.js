@@ -1,6 +1,6 @@
 var cli = function() {
     const yargs = require("yargs");
-    const str2bin = require("./index");
+    const str2bin = require("../index");
 
     const options = yargs
         .usage("Usage: str2bin <option>")
